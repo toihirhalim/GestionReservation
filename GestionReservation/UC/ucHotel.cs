@@ -22,6 +22,11 @@ namespace GestionReservation.UC
 
         private void dtPicker_ValueChanged(object sender, EventArgs e)
         {
+            showStatus();
+        }
+
+        private void showStatus()
+        {
             foreach (Control item in this.Controls)
             {
                 if (item is ucRoom)
@@ -31,6 +36,11 @@ namespace GestionReservation.UC
                 }
 
             }
+        }
+
+        private void ucHotel_Load(object sender, EventArgs e)
+        {
+            showStatus();
         }
     }
 }

@@ -17,12 +17,14 @@ namespace GestionReservation.Model
             Reservation res2 = new Reservation(5, new DateTime(2021, 4, 8));
             Reservation res3 = new Reservation(7, new DateTime(2021, 4, 9));
             Reservation res4 = new Reservation(8, new DateTime(2021, 4, 10));
+            Reservation res5 = new Reservation(2, new DateTime(2021, 4, 18));
             ListRes = new List<Reservation>
             {
                 res1,
                 res2,
                 res3,
-                res4
+                res4,
+                res5
             };
         }
 
