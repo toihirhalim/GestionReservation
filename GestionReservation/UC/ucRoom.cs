@@ -1,5 +1,4 @@
-﻿using GestionReservation.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,17 +12,15 @@ namespace GestionReservation.UC
 {
     public partial class ucRoom : UserControl
     {
+        DCDataContext DC = new DCDataContext();
         public int Num { get; set; }
-        public void ShowStatus(DateTime dateRes) {
-            foreach (Reservation res in ucHotel.DB.ListRes)
-            {
-                if(res.Num == this.Num && res.DateRes == dateRes.Date )
-                {
-                    this.BackColor = Color.Red;
-                    return;
-                }
-            }
-            this.BackColor = Color.Yellow;
+        public void ShowStatus(DateTime dateRes, int level) {
+            Reservation res = DC.Reservation.FirstOrDefault(r => r.Room == Num && r.Level == level && r.Date == dateRes);
+
+            if(res != null)
+                this.BackColor = Color.Red;
+            else
+                this.BackColor = Color.Yellow;
         }
         public ucRoom()
         {
