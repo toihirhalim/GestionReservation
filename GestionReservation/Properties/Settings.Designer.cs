@@ -33,5 +33,27 @@ namespace GestionReservation.Properties {
                 return ((string)(this["maBaseConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\maBase.mdf;In" +
+            "tegrated Security=True")]
+        public string maBaseConnectionString1 {
+            get {
+                return ((string)(this["maBaseConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\App_Data\\myDa" +
+            "taBase.mdf;Integrated Security=True")]
+        public string myDataBaseConnectionString {
+            get {
+                return ((string)(this["myDataBaseConnectionString"]));
+            }
+        }
     }
 }

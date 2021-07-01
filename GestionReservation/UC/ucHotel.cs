@@ -12,6 +12,7 @@ namespace GestionReservation.UC
 {
     public partial class ucHotel : UserControl
     {
+        public int level = 0;
         public ucHotel()
         {
             InitializeComponent();
@@ -29,14 +30,49 @@ namespace GestionReservation.UC
                 if (item is ucRoom)
                 {
                     ucRoom room = (ucRoom)item;
-                    room.ShowStatus(dtPicker.Value, 0);
+                    room.ShowStatus(dtPicker.Value, level);
                 }
 
             }
         }
 
+        private void showSelectedLevel()
+        {
+            foreach (Button btn in levels.Controls)
+            {
+                if(btn.Text.Equals("" + level))
+                {
+                    btn.BackColor = Color.Blue;
+                }else
+                {
+                    btn.BackColor = Color.Transparent;
+                }
+            }
+                
+        }
+
         private void ucHotel_Load(object sender, EventArgs e)
         {
+            showSelectedLevel();
+            showStatus();
+        }
+
+        private void levelBtn_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            int l = level;
+
+            try
+            {
+                l = int.Parse(btn.Text);
+            }
+            catch (Exception)
+            {
+
+            }
+
+            level = l;
+            showSelectedLevel();
             showStatus();
         }
     }

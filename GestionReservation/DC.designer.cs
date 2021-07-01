@@ -22,7 +22,7 @@ namespace GestionReservation
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="maBase")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="myDataBase")]
 	public partial class DCDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -36,7 +36,7 @@ namespace GestionReservation
     #endregion
 		
 		public DCDataContext() : 
-				base(global::GestionReservation.Properties.Settings.Default.maBaseConnectionString, mappingSource)
+				base(global::GestionReservation.Properties.Settings.Default.myDataBaseConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
