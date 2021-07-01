@@ -18,9 +18,9 @@ namespace GestionReservation.UC
             Reservation res = DC.Reservation.FirstOrDefault(r => r.Room == Num && r.Level == level && r.Date == dateRes);
 
             if(res != null)
-                this.BackColor = Color.Red;
+                this.BackColor = Color.Maroon;
             else
-                this.BackColor = Color.Yellow;
+                this.BackColor = Color.DarkGray;
         }
         public ucRoom()
         {

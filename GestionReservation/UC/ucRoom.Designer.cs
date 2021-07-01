@@ -43,9 +43,10 @@ namespace GestionReservation.UC
             this.lbNum.BackColor = System.Drawing.Color.Navy;
             this.lbNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNum.ForeColor = System.Drawing.Color.White;
-            this.lbNum.Location = new System.Drawing.Point(1, 68);
+            this.lbNum.Location = new System.Drawing.Point(0, 35);
+            this.lbNum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbNum.Name = "lbNum";
-            this.lbNum.Size = new System.Drawing.Size(36, 37);
+            this.lbNum.Size = new System.Drawing.Size(19, 20);
             this.lbNum.TabIndex = 0;
             this.lbNum.Text = "0";
             // 
@@ -56,29 +57,30 @@ namespace GestionReservation.UC
             this.libérerMenuItem,
             this.réserverMenuItem});
             this.Menu.Name = "Menu";
-            this.Menu.Size = new System.Drawing.Size(181, 80);
+            this.Menu.Size = new System.Drawing.Size(119, 48);
             // 
             // libérerMenuItem
             // 
             this.libérerMenuItem.Name = "libérerMenuItem";
-            this.libérerMenuItem.Size = new System.Drawing.Size(180, 38);
+            this.libérerMenuItem.Size = new System.Drawing.Size(118, 22);
             this.libérerMenuItem.Text = "Libérer";
             // 
             // réserverMenuItem
             // 
             this.réserverMenuItem.Name = "réserverMenuItem";
-            this.réserverMenuItem.Size = new System.Drawing.Size(180, 38);
+            this.réserverMenuItem.Size = new System.Drawing.Size(118, 22);
             this.réserverMenuItem.Text = "Réserver";
             // 
             // ucRoom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.ContextMenuStrip = this.Menu;
             this.Controls.Add(this.lbNum);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ucRoom";
-            this.Size = new System.Drawing.Size(342, 106);
+            this.Size = new System.Drawing.Size(171, 55);
             this.Load += new System.EventHandler(this.ucRoom_Load);
             this.Menu.ResumeLayout(false);
             this.ResumeLayout(false);

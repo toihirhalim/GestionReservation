@@ -35,7 +35,7 @@ namespace GestionReservation
             // 
             // ucHotel1
             // 
-            this.ucHotel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.ucHotel1.BackColor = System.Drawing.Color.LightGray;
             this.ucHotel1.Location = new System.Drawing.Point(10, 71);
             this.ucHotel1.Margin = new System.Windows.Forms.Padding(1);
             this.ucHotel1.Name = "ucHotel1";
