@@ -32,8 +32,8 @@ namespace GestionReservation.UC
             this.components = new System.ComponentModel.Container();
             this.lbNum = new System.Windows.Forms.Label();
             this.Menu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.libérerMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.réserverMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.libererMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reserverMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,22 +54,24 @@ namespace GestionReservation.UC
             // 
             this.Menu.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.Menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.libérerMenuItem,
-            this.réserverMenuItem});
+            this.libererMenuItem,
+            this.reserverMenuItem});
             this.Menu.Name = "Menu";
-            this.Menu.Size = new System.Drawing.Size(119, 48);
+            this.Menu.Size = new System.Drawing.Size(181, 70);
             // 
-            // libérerMenuItem
+            // libererMenuItem
             // 
-            this.libérerMenuItem.Name = "libérerMenuItem";
-            this.libérerMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.libérerMenuItem.Text = "Libérer";
+            this.libererMenuItem.Name = "libererMenuItem";
+            this.libererMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.libererMenuItem.Text = "Libérer";
+            this.libererMenuItem.Click += new System.EventHandler(this.libererMenuItem_Click);
             // 
-            // réserverMenuItem
+            // reserverMenuItem
             // 
-            this.réserverMenuItem.Name = "réserverMenuItem";
-            this.réserverMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.réserverMenuItem.Text = "Réserver";
+            this.reserverMenuItem.Name = "reserverMenuItem";
+            this.reserverMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reserverMenuItem.Text = "Réserver";
+            this.reserverMenuItem.Click += new System.EventHandler(this.reserverMenuItem_Click);
             // 
             // ucRoom
             // 
@@ -78,7 +80,7 @@ namespace GestionReservation.UC
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ContextMenuStrip = this.Menu;
             this.Controls.Add(this.lbNum);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ucRoom";
             this.Size = new System.Drawing.Size(171, 55);
             this.Load += new System.EventHandler(this.ucRoom_Load);
@@ -92,7 +94,7 @@ namespace GestionReservation.UC
 
         private System.Windows.Forms.Label lbNum;
         private System.Windows.Forms.ContextMenuStrip Menu;
-        private System.Windows.Forms.ToolStripMenuItem libérerMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem réserverMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem libererMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reserverMenuItem;
     }
 }
